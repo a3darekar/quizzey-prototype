@@ -6,7 +6,8 @@
 			Questions for section3
 		<br>
 		<br>
-		<a class="button" @click="proceed"><b>Proceed</b></a>
+		<a class="button" @click="back"><b>Back</b></a>
+		<a class="button" @click="proceed"><b>Conclude the quiz</b></a>
 	</content>
 </template>
 
@@ -22,6 +23,10 @@ export default {
 	},
 
 	methods: {
+		back() {
+			this.step--;
+			this.$emit('updateCurrentStep', this.step);
+		},
 		proceed() {
 			this.step++;
 			this.$emit('updateCurrentStep', this.step);

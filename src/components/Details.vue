@@ -14,6 +14,7 @@
 		<input type="text" id="email">
 		<br>
 		<br>
+		<a class="button" @click="back"><b>Go back to main site</b></a>
 		<a class="button" @click="proceed"><b>Proceed</b></a>
 	</content>
 </template>
@@ -29,6 +30,10 @@ export default {
 		}
 	},
 	methods: {
+		back() {
+			this.step--;
+			this.$emit('updateCurrentStep', this.step);
+		},
 		proceed() {
 			this.step++;
 			this.$emit('updateCurrentStep', this.step);
