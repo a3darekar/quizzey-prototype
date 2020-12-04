@@ -16,8 +16,8 @@ export default {
 	name: 'Nav',
 	props: ['nav_link'],
 	methods: {
-		activate_link:function(el) {
-			this.nav_link = el;
+		activate_link:function(val) {
+			this.nav_link = val;
 			this.$emit('changeNavLink', this.nav_link);
 		}
 	}
