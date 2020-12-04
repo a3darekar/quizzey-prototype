@@ -1,0 +1,42 @@
+<template>
+	<content>
+		<h3>Section #1</h3>
+		<br>
+		<br>
+		Questions for section1
+		<br>
+		<br>
+		<a class="button" @click="proceed"><b>Proceed</b></a>
+	</content>
+</template>
+
+<script>
+export default {
+
+	name: 'Intro',
+	props: ['currentStep'],
+	data () {
+		return {
+			step: this.currentStep,
+		}
+	},
+	methods: {
+		proceed() {
+			this.step++;
+			this.$emit('updateCurrentStep', this.step);
+		}
+	}
+};
+</script>
+
+<style lang="css" scoped>
+.button {
+	background-color:#fff;
+	color:#fd746c;
+	border-color:#fff;
+	border-radius: 15px;
+	padding: 10px 30px;
+	margin: 60px;
+	cursor: pointer;
+}
+</style>
