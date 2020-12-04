@@ -7,7 +7,18 @@
 			</div>
 			<div v-else-if="active_nav_link == 2">
 				<div id="about">
-					This site is created to serve as a prototype for a prospected project. This is developed by <a href="github.com/a3darekar">a3darekar</a>.
+					<h2>
+						About Quizzey Prototype
+					</h2>
+					<br>
+					<p>
+						This application is created to serve as a prototype for a prospected project. The current version does not have any backend support and all data is lost once the browser tab or window is closed.
+					</p>
+					<p>
+						This prototype is developed by <a href="github.com/a3darekar">a3darekar</a>.
+						For any queries or questions reach out to me via links in Contact Tab.
+					</p>
+					<br>
 				</div>
 			</div>
 			<div v-else-if="active_nav_link == 3">
@@ -46,15 +57,15 @@ body {
 	color: #fff;
 }
 
-a:link {
+a {
+	font-weight: bold;
 	color: #fff;
 	text-decoration: underline;
-
 }
 
 #about {
 	text-align: center;
-	padding: 80px 40px;
+	padding: 10px 40px;
 	vertical-align: middle;
 	margin: 80px 160px;
 	border: 1px solid #fff;
